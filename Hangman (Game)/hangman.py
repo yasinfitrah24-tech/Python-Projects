@@ -1,7 +1,73 @@
 import random
+logo = r''' 
+ _                                             
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/    '''
 
-from hangman_words import word_list
-from hangman_art import stages, logo
+stages = [r'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', r'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', r'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
+word_list = ["apple", "banana", "coconut", "pear"]
+#You can change the world list whatever you want
 
 lives = 6
 
@@ -9,7 +75,7 @@ print(logo)
 
 chosen_word = random.choice(word_list)
 
-
+print(chosen_word)
 placeholder = ""
 word_length = len(chosen_word)
 for position in range(word_length):
@@ -54,4 +120,3 @@ while not game_over:
         print("****************************YOU WIN****************************")
 
     print(stages[lives])
-
