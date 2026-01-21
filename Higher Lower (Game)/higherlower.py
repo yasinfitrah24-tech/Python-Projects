@@ -41,7 +41,7 @@ while game_should_continue:
     print(f"Against B: {format_data(account_b)}.")
 
     # Ask user for a guess.
-    guess = input("Who has more followers? Type 'A' or 'B': ").lower()
+    guess = input("Who has more followers on Instagram? Type 'A' or 'B': ").lower()
 
     # Clear the screen
     print("\n" * 20)
